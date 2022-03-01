@@ -253,6 +253,7 @@ body {
 
 .highlight {
     border-bottom: 4px solid white;
+    border-radius: 2px 2px 2px 2px;
 }
 
 @media screen and (max-width: 768px) {
