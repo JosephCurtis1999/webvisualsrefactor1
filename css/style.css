@@ -568,6 +568,10 @@ body {
     .services__wrapper {
         grid-template-columns: 1fr;
     }
+
+    .services__card button {
+        font-weight: 300;
+    }
 }
 
 /* footer section */
