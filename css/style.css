@@ -258,6 +258,7 @@ body {
 @media screen and (max-width: 768px) {
     .hero__heading {
         font-size: 60px;
+        letter-spacing: -2px;
     }
 
     .hero__description {
