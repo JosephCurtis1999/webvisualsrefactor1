@@ -618,3 +618,21 @@ body {
     text-decoration: none;
     font-size: 1.25rem;
 }
+
+@media screen and (max-width: 1000px ) {
+    .social__media--wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+    }
+
+    .footer__logo {
+        margin-bottom: 1rem;
+    }
+
+    .website__rights {
+        margin-bottom: 1rem;
+    }
+
+}
