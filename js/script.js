@@ -26,7 +26,7 @@ const highlightMenu = () => {
         homeMenu.classList.add('highlight')
         aboutMenu.classList.remove('highlight')
         return
-    } else if (window.innerWidth > 960 && scrollPos < 1300) {
+    } else if (window.innerWidth > 960 && scrollPos < 1350) {
         aboutMenu.classList.add('highlight')
         homeMenu.classList.remove('highlight')
         servicesMenu.classList.remove('highlight')
