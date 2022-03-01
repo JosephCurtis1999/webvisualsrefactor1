@@ -333,7 +333,7 @@ body {
     left: 0;
     width: 0;
     height: 100%;
-    background-color: rgb(32, 82, 190);
+    background-color: #2052be;
     transition: all 0.35s;
     border-radius: 8px;
 }
@@ -462,4 +462,99 @@ body {
         margin: 2.5rem 0;
     }
     
+}
+
+/* Services section */
+
+.services {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 10rem 0;
+}
+
+.services h1 {
+    color: rgb(252, 239, 239);
+    margin-bottom: 5rem;
+    font-size: 3rem;
+}
+
+.services__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.services__card {
+    margin: 10px;
+    height: 425px;
+    width: 300px;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background:-moz-radial-gradient(ellipse at 50% 50%, rgba(0, 188, 212, 1) 0%, rgba(255, 255, 255, 1) 100%);
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-radial-gradient(ellipse at 50% 50%, rgba(0, 188, 212, 1) 0%, rgba(255, 255, 255, 1) 100%);
+
+    /* opera 11.10+ */
+    background:-o-radial-gradient(ellipse at 50% 50%, rgba(0, 188, 212, 1) 0%, rgba(255, 255, 255, 1) 100%);
+
+    /* ie 10+ */
+    background:-ms-radial-gradient(ellipse at 50% 50%, rgba(0, 188, 212, 1) 0%, rgba(255, 255, 255, 1) 100%);
+
+    /* global 92%+ browsers support */
+    background:radial-gradient(ellipse at 50% 50%, rgba(0, 188, 212, 1) 0%, rgba(255, 255, 255, 1) 100%);
+
+    transition: 0.3s ease-in;
+    color: white;
+}
+
+.services__card h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.services__btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.services__card button {
+    color: #2052be;
+    padding: 14px 24px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    background-color: whitesmoke;
+    font-size: 1.25rem;
+    color: #12c2e9;
+    font-weight: 600;
+}
+
+.services__card img {
+    max-height: 100px;
+    max-width: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    filter: invert(1)
+}
+
+@media screen and (max-width: 1300px) {
+    .services__wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .services__wrapper {
+        grid-template-columns: 1fr;
+    }
 }
