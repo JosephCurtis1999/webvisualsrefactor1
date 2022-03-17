@@ -2,6 +2,58 @@ const menu = document.querySelector('#mobile-menu');
 const menuLinks = document.querySelector('.navbar__menu');
 const navLogo = document.querySelector('#navbar__logo');
 
+//   all ------------------
+function initParadoxWay() {
+    "use strict";
+   
+    if ($(".testimonials-carousel").length > 0) {
+        var j2 = new Swiper(".testimonials-carousel .swiper-container", {
+            preloadImages: false,
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            grabCursor: true,
+            mousewheel: false,
+            centeredSlides: true,
+            pagination: {
+                el: '.tc-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: '.listing-carousel-button-next',
+                prevEl: '.listing-carousel-button-prev',
+            },
+            breakpoints: {
+                1024: {
+                    slidesPerView: 3,
+                },
+                
+            }
+        });
+    }
+    
+// bubbles -----------------
+    
+    
+    setInterval(function () {
+        var size = randomValue(sArray);
+        $('.bubbles').append('<div class="individual-bubble" style="left: ' + randomValue(bArray) + 'px; width: ' + size + 'px; height:' + size + 'px;"></div>');
+        $('.individual-bubble').animate({
+            'bottom': '100%',
+            'opacity': '-=0.7'
+        }, 4000, function () {
+            $(this).remove()
+        });
+    }, 350);
+    
+}
+
+//   Init All ------------------
+$(document).ready(function () {
+    initParadoxWay();
+});
+
 // Display mobile Menu
 
 const mobileMenu = () => {
@@ -12,34 +64,34 @@ const mobileMenu = () => {
 menu.addEventListener('click', mobileMenu);
 
 // Active menu when scrolling 
-const highlightMenu = () => {
-    const elem = document.querySelector('.highlight')
-    const homeMenu = document.querySelector('#home-page')
-    const aboutMenu = document.querySelector('#about-page')
-    const servicesMenu = document.querySelector('#services-page')
+// const highlightMenu = () => {
+//     const elem = document.querySelector('.highlight')
+//     const featuresMenu = document.querySelector('#features-page')
+//     const pricingMenu = document.querySelector('#pricing-page')
+//     const testimonialsMenu = document.querySelector('#testimonials-page')
 
-    let scrollPos = window.scrollY
+//     let scrollPos = window.scrollY
 
-    //  adds highlight class to menu items
+//     //  adds highlight class to menu items
 
-    if(window.innerWidth > 960 && scrollPos < 600) {
-        homeMenu.classList.add('highlight')
-        aboutMenu.classList.remove('highlight')
-        return
-    } else if (window.innerWidth > 960 && scrollPos < 1350) {
-        aboutMenu.classList.add('highlight')
-        homeMenu.classList.remove('highlight')
-        servicesMenu.classList.remove('highlight')
-    } else if (window.innerWidth > 960 && scrollPos < 2345) {
-        servicesMenu.classList.add('highlight')
-        aboutMenu.classList.remove('highlight')
-        return
-    }
+//     if(window.innerWidth > 960 && scrollPos < 2100 && scrollPos > 800) {
+//         featuresMenu.classList.add('highlight')
+//         pricingMenu.classList.remove('highlight')
+//         return
+//     } else if (window.innerWidth > 960 && scrollPos < 3000 && scrollPos > 2110) {
+//         pricingMenu.classList.add('highlight')
+//         featuresMenu.classList.remove('highlight')
+//         testimonialsMenu.classList.remove('highlight')
+//     } else if (window.innerWidth > 960 && scrollPos < 4000 && scrollPos > 3110) {
+//         testimonialsMenu.classList.add('highlight')
+//         pricingMenu.classList.remove('highlight')
+//         return
+//     }
 
-    if(elem && window.innerWidth < 960 && scrollPos < 600 || elem) {
-        elem.classList.remove('highlight')
-    }
-};
+//     if(elem && window.innerWidth < 960 && scrollPos < 600 || elem) {
+//         elem.classList.remove('highlight')
+//     }
+// };
 
 window.addEventListener('scroll', highlightMenu);
 window.addEventListener('click', highlightMenu);
@@ -54,3 +106,26 @@ const hideMobileMenu = () => {
 
 menuLinks.addEventListener('click', hideMobileMenu);
 navLogo.addEventListener('click', hideMobileMenu);
+
+
+// contact form js
+
+const inputs = document.querySelectorAll(".input");
+
+function focusFunc() {
+    let parent = this.parentNode;
+    parent.classList.add("focus");
+}
+
+function blurFunc() {
+    let parent = this.parentNode;
+    if(this.value == "") {
+
+    }
+    parent.classList.remove("focus");
+}
+
+inputs.forEach(input => {
+    input.addEventListener("focus", focusFunc);
+    input.addEventListener("blur", blurFunc);
+})
