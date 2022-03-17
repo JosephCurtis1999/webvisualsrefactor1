@@ -1,6 +1,3 @@
-const menu = document.querySelector('#mobile-menu');
-const menuLinks = document.querySelector('.navbar__menu');
-const navLogo = document.querySelector('#navbar__logo');
 
 //   all ------------------
 function initParadoxWay() {
@@ -56,6 +53,10 @@ $(document).ready(function () {
 
 // Display mobile Menu
 
+const menu = document.querySelector('#mobile-menu');
+const menuLinks = document.querySelector('.navbar__menu');
+const navLogo = document.querySelector('#navbar__logo');
+
 const mobileMenu = () => {
     menu.classList.toggle('is-active')
     menuLinks.classList.toggle('active')
@@ -63,35 +64,6 @@ const mobileMenu = () => {
 
 menu.addEventListener('click', mobileMenu);
 
-// Active menu when scrolling 
-// const highlightMenu = () => {
-//     const elem = document.querySelector('.highlight')
-//     const featuresMenu = document.querySelector('#features-page')
-//     const pricingMenu = document.querySelector('#pricing-page')
-//     const testimonialsMenu = document.querySelector('#testimonials-page')
-
-//     let scrollPos = window.scrollY
-
-//     //  adds highlight class to menu items
-
-//     if(window.innerWidth > 960 && scrollPos < 2100 && scrollPos > 800) {
-//         featuresMenu.classList.add('highlight')
-//         pricingMenu.classList.remove('highlight')
-//         return
-//     } else if (window.innerWidth > 960 && scrollPos < 3000 && scrollPos > 2110) {
-//         pricingMenu.classList.add('highlight')
-//         featuresMenu.classList.remove('highlight')
-//         testimonialsMenu.classList.remove('highlight')
-//     } else if (window.innerWidth > 960 && scrollPos < 4000 && scrollPos > 3110) {
-//         testimonialsMenu.classList.add('highlight')
-//         pricingMenu.classList.remove('highlight')
-//         return
-//     }
-
-//     if(elem && window.innerWidth < 960 && scrollPos < 600 || elem) {
-//         elem.classList.remove('highlight')
-//     }
-// };
 
 window.addEventListener('scroll', highlightMenu);
 window.addEventListener('click', highlightMenu);
