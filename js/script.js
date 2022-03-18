@@ -1,3 +1,22 @@
+const inputs = document.querySelectorAll(".input");
+
+function focusFunc() {
+    let parent = this.parentNode;
+    parent.classList.add("focus");
+}
+
+function blurFunc() {
+    let parent = this.parentNode;
+    if(this.value == "") {
+
+    }
+    parent.classList.remove("focus");
+}
+
+inputs.forEach(input => {
+    input.addEventListener("focus", focusFunc);
+    input.addEventListener("blur", blurFunc);
+});
 
 //   all ------------------
 function initParadoxWay() {
@@ -44,7 +63,7 @@ function initParadoxWay() {
         });
     }, 350);
     
-}
+};
 
 //   Init All ------------------
 $(document).ready(function () {
@@ -74,7 +93,7 @@ const hideMobileMenu = () => {
         menu.classList.toggle('is-active')
         menuLinks.classList.remove('is-active')
     }
-}
+};
 
 menuLinks.addEventListener('click', hideMobileMenu);
 navLogo.addEventListener('click', hideMobileMenu);
@@ -82,22 +101,6 @@ navLogo.addEventListener('click', hideMobileMenu);
 
 // contact form js
 
-const inputs = document.querySelectorAll(".input");
 
-function focusFunc() {
-    let parent = this.parentNode;
-    parent.classList.add("focus");
-}
 
-function blurFunc() {
-    let parent = this.parentNode;
-    if(this.value == "") {
 
-    }
-    parent.classList.remove("focus");
-}
-
-inputs.forEach(input => {
-    input.addEventListener("focus", focusFunc);
-    input.addEventListener("blur", blurFunc);
-})
