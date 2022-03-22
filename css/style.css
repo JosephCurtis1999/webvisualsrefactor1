@@ -603,7 +603,11 @@ body {
 
 @media screen and (max-width: 1300px) {
     .prices__wrapper {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .prices__card {
+      width: 375px;
     }
 }
 
@@ -614,6 +618,10 @@ body {
 
     .prices__card button {
         font-weight: 300;
+    }
+
+    .prcies__card {
+      width: 350px;
     }
 }
 
