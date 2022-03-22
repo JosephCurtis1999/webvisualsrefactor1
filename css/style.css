@@ -473,6 +473,10 @@ body {
     .features__card button {
         font-weight: 300;
     }
+
+    .features__card h2 {
+      letter-spacing: -2px;
+    }
 }
 
 /* Pricing section */
