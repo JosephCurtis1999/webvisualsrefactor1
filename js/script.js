@@ -84,12 +84,9 @@ const mobileMenu = () => {
 menu.addEventListener('click', mobileMenu);
 
 
-window.addEventListener('scroll', highlightMenu);
-window.addEventListener('click', highlightMenu);
-
 const hideMobileMenu = () => {
-    const menuBars = document.querySelector('is-active')
-    if(window.innerWidth <= 768 && menuBars) {
+    const menuBars = document.querySelector('.is-active')
+    if(window.innerWidth <= 1150 && menuBars) {
         menu.classList.toggle('is-active')
         menuLinks.classList.remove('active')
     }
@@ -97,7 +94,6 @@ const hideMobileMenu = () => {
 
 menuLinks.addEventListener('click', hideMobileMenu);
 navLogo.addEventListener('click', hideMobileMenu);
-
 
 // contact form js
 
