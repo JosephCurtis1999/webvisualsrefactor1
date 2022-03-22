@@ -264,7 +264,7 @@ body {
 }
 
 .hero__heading {
-    font-size: 100px;
+    font-size: 80px;
     margin-bottom: 24px;
     color: white;
     letter-spacing: -1px;
@@ -283,13 +283,13 @@ body {
     border-bottom: 4px solid white;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1600px) {
   .hero {
     padding: 150px 0;
   }
 
   .hero__heading {
-    font-size: 75px;
+    font-size: 70px;
   }
 
   .hero__description {
