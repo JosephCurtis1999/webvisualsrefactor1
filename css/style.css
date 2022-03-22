@@ -854,6 +854,21 @@ section {
 	transition: all 300ms ease-in-out;
 }
 
+@media screen and (max-width: 768px) {
+  .testimonials-text p {
+    font-size: 1.1rem;
+
+  }
+
+  .listing-carousel-button {
+    width: 60px;
+    height: 40px;
+  }
+
+}
+  
+
+
 
 /* contact section */
 
