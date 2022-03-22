@@ -283,14 +283,33 @@ body {
     border-bottom: 4px solid white;
 }
 
+@media screen and (max-width: 1300px) {
+  .hero {
+    padding: 150px 0;
+  }
+
+  .hero__heading {
+    font-size: 75px;
+  }
+
+  .hero__description {
+    font-size: 30px;
+  }
+}
+
 @media screen and (max-width: 768px) {
+    .hero {
+      padding: 100px 0;
+    }
+
     .hero__heading {
-        font-size: 60px;
-        letter-spacing: -2px;
+        font-size: 40px;
+        letter-spacing: -3px;
     }
 
     .hero__description {
-        font-size: 30px;
+        font-size: 25px;
+        letter-spacing: -2px;
     }
 
 }
