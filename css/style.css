@@ -1122,6 +1122,15 @@ section {
       right: 65px;
       transform: scale(0.95);
     }
+
+    .social-media p {
+      margin-bottom: 2rem;
+    }
+
+    .social-icons img {
+      max-height: 60px;
+      max-width: 45px;
+    }
   
     .contact-form:before {
       top: -13px;
