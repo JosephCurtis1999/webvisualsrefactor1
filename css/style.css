@@ -271,7 +271,7 @@ body {
 }
 
 .hero__heading span {
-    color: rgb(252, 239, 239);
+    color: white;
 }
 
 .hero__description {
@@ -303,12 +303,12 @@ body {
     }
 
     .hero__heading {
-        font-size: 40px;
+        font-size: 50px;
         letter-spacing: -3px;
     }
 
     .hero__description {
-        font-size: 25px;
+        font-size: 30px;
         letter-spacing: -2px;
     }
 
@@ -363,6 +363,13 @@ body {
     width: 100%;
 }
 
+@media screen and (max-width: 768px) {
+  .main__btn {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+  }
+
+}
 
 
 /* Features section */
@@ -475,6 +482,10 @@ body {
     }
 
     .features__card h2 {
+      letter-spacing: -2px;
+    }
+
+    .features h1 {
       letter-spacing: -2px;
     }
 }
@@ -622,6 +633,14 @@ body {
 
     .prcies__card {
       width: 350px;
+    }
+
+    #cost {
+      font-size: 3rem;
+    }
+
+    .prices h1 {
+      letter-spacing: -2px;
     }
 }
 
@@ -873,6 +892,11 @@ section {
     height: 40px;
   }
 
+  .section-title h2 {
+    letter-spacing: -2px;
+  }
+
+
 }
   
 
@@ -882,13 +906,13 @@ section {
 
 .chat {
 
-    width: 100%;
+  width: 100%;
 	text-align: center;
 	font-size: 3rem;
 	font-weight: 800;
 	position: relative;
-    color: white;
-    margin-bottom: 3rem;
+  color: white;
+  margin-bottom: 3rem;
 
 }
 
@@ -910,7 +934,7 @@ section {
     border-radius: 10px;
     box-shadow: 0 0 20px 1px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    overflow: hidden;
+    /* overflow: hidden; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1215,3 +1239,10 @@ section {
   }
 
 
+  @media screen and (max-width: 768px) {
+    .chat {
+      letter-spacing: -2px;
+    }
+  
+  }
+  
